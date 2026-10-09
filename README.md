@@ -112,3 +112,21 @@ npm run test:emulators
 ```
 
 Integration tests use the separate project `demo-fit5032-test` and reset its test data. Run only one emulator instance at a time because the instances share local ports.
+
+## Cloud functions
+
+The cloud project is `week9-10-4af68`. The local application continues to use the emulators by default.
+
+To deploy the functions after signing in to the Firebase CLI:
+
+```sh
+npx firebase deploy --only functions --project week9-10-4af68
+```
+
+The cloud counter endpoint is:
+
+```text
+https://us-central1-week9-10-4af68.cloudfunctions.net/countBooks
+```
+
+Cloud Firestore data is separate from the local emulator data.

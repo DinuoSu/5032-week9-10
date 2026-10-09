@@ -18,3 +18,5 @@
 Week 9：Book Counter 页面及接口 JSON 截图已完成，截图时共 7 本。新增图书大写功能已在 Functions 模拟器运行：以小写名称新增 ISBN 4201 后，页面显示 A TALE OF TWO CITIES。截图需包含 functions/index.js 的 capitaliseBook 函数及浏览器新增成功消息、大写结果。现在图书总数为 8。
 
 课程 9.4 允许使用模拟器而无需 firebase deploy；提交总览仍写有 Firebase 部署及账号可见的截图要求。如提交时要求云端控制台截图，需另行完成真实 Firebase 项目部署。当前证据均为本地模拟器。
+
+云端部署补充：week9-10-4af68 已创建默认 Firestore 数据库（us-central1），countBooks 与 capitaliseBook 均已部署。Firebase Functions 列表及账号截图已保存为 docs/evidence/week9-cloud-functions.jpg。云端数据库当前为空，统计接口返回 0；本地练习数据独立保存。构建镜像自动清理策略尚未设置。
