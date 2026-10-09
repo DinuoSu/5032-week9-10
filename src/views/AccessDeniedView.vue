@@ -1,0 +1,1 @@
+<template><section class="container py-5"><h1>Access Denied</h1><p>You need an administrator account for this page.</p><RouterLink to="/FireLogin">Sign in with Firebase</RouterLink></section></template>

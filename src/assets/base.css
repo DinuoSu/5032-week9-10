@@ -1,0 +1,5 @@
+:root { font-family: Arial, sans-serif; color-scheme: light; }
+body { min-width: 320px; }
+.auth-panel { max-width: 640px; }
+.table-scroll { overflow-x: auto; }
+button, input, select, textarea { touch-action: manipulation; }
