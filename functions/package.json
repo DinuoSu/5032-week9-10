@@ -3,7 +3,10 @@
   "private": true,
   "main": "index.js",
   "engines": { "node": "22" },
-  "scripts": { "check": "node --check index.js" },
+  "scripts": {
+    "check": "node --check index.js",
+    "test:integration": "node --test books-created.test.cjs"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "firebase-admin": "^14.5.0",

@@ -1,9 +1,25 @@
 const { onRequest } = require("firebase-functions/v2/https");
+const { onDocumentCreated } = require("firebase-functions/v2/firestore");
 const admin = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
 const cors = require("cors")({ origin: true });
 
 admin.initializeApp();
+
+exports.capitaliseBook = onDocumentCreated({
+  document: "books/{bookId}",
+  region: "us-central1",
+}, async (event) => {
+  const snapshot = event.data;
+  if (!snapshot) return;
+  const updates = {};
+  for (const [field, value] of Object.entries(snapshot.data())) {
+    if (typeof value === "string" && value !== value.toUpperCase()) {
+      updates[field] = value.toUpperCase();
+    }
+  }
+  if (Object.keys(updates).length) await snapshot.ref.update(updates);
+});
 
 exports.countBooks = onRequest({ region: "us-central1" }, (req, res) => {
   return cors(req, res, async () => {

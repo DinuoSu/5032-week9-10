@@ -11,6 +11,7 @@ A library web application for FIT5032 coursework, built with Vue 3, Vite, Bootst
 - Member and administrator roles enforced by Firestore rules.
 - Book management with ISBN filters, sorting and result limits. Members can add books; administrators can also edit and delete them.
 - A Book Counter page that calls the `countBooks` HTTP function through Axios.
+- A Firestore function that capitalises text fields when a new book is added.
 
 The registration form keeps its submitted records in page memory and displays masked passwords. Firebase accounts and book records use the local emulators. The book list defaults to `isbn > 1000`, sorted by ISBN in ascending order, with a limit of 10 results. The counter returns the total number of documents in the `books` collection.
 
@@ -73,7 +74,7 @@ The demo member login and Firebase sign-in are separate. Newly registered Fireba
 | `src/stores/` | Authentication state |
 | `src/services/` | Firestore book operations |
 | `src/firebase/` | Firebase client configuration |
-| `functions/` | The `countBooks` HTTP function |
+| `functions/` | HTTP book counter and Firestore book creation function |
 | `scripts/` | Emulator startup and sample data scripts |
 | `firestore.rules` | Database access rules |
 

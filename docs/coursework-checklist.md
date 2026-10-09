@@ -15,4 +15,6 @@
 
 `docs/evidence` 内保存本次浏览器验收截图，可作为素材。若课程要求 VS Code / DevTools 同屏、eFolio PDF、提交说明或 tutor 展示，请按课程格式自行整理；尚未代你提交 Moodle，也未推送 GitHub。
 
-Week 9 当前停在第四处截图：Emulator UI 总览显示 Functions On，端口 5001。函数已通过本地 HTTP 调用返回真实书数。第三处 functions/index.js 已因 Admin SDK 14 接口变更改用 getFirestore，需更新旧代码截图。前端显示真实总数留到下一处验收；没有云端部署。
+Week 9：Book Counter 页面及接口 JSON 截图已完成，截图时共 7 本。新增图书大写功能已在 Functions 模拟器运行：以小写名称新增 ISBN 4201 后，页面显示 A TALE OF TWO CITIES。截图需包含 functions/index.js 的 capitaliseBook 函数及浏览器新增成功消息、大写结果。现在图书总数为 8。
+
+课程 9.4 允许使用模拟器而无需 firebase deploy；提交总览仍写有 Firebase 部署及账号可见的截图要求。如提交时要求云端控制台截图，需另行完成真实 Firebase 项目部署。当前证据均为本地模拟器。
