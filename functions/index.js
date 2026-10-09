@@ -1,5 +1,6 @@
 const { onRequest } = require("firebase-functions/v2/https");
-const admin = require("firebase-admin");
+const admin = require("firebase-admin/app");
+const { getFirestore } = require("firebase-admin/firestore");
 const cors = require("cors")({ origin: true });
 
 admin.initializeApp();
@@ -11,7 +12,7 @@ exports.countBooks = onRequest({ region: "us-central1" }, (req, res) => {
       return res.status(405).send("Method not allowed");
     }
     try {
-      const booksCollection = admin.firestore().collection("books");
+      const booksCollection = getFirestore().collection("books");
       const snapshot = await booksCollection.get();
       const count = snapshot.size;
       return res.status(200).json({ count });

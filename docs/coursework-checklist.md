@@ -15,4 +15,4 @@
 
 `docs/evidence` 内保存本次浏览器验收截图，可作为素材。若课程要求 VS Code / DevTools 同屏、eFolio PDF、提交说明或 tutor 展示，请按课程格式自行整理；尚未代你提交 Moodle，也未推送 GitHub。
 
-Week 9 当前停在第三处截图：`functions/index.js` 全部代码。前两处分别是 GetBookCountView.vue，以及 router/index.js 与 BHeader.vue。后台已编写但尚未启动或部署，因此真实书数和函数运行结果留到下一处验收。
+Week 9 当前停在第四处截图：Emulator UI 总览显示 Functions On，端口 5001。函数已通过本地 HTTP 调用返回真实书数。第三处 functions/index.js 已因 Admin SDK 14 接口变更改用 getFirestore，需更新旧代码截图。前端显示真实总数留到下一处验收；没有云端部署。
